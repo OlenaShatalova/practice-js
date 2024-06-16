@@ -200,7 +200,7 @@
 // console.log(checkNumber(15));
 
 // Переверни рядок у зворотньому порядку
-const string = "Hello";
+// const string = "Hello";
 // let reversedString = '';
 
 // for (let i = string.length - 1; i >= 0; i--){
@@ -209,15 +209,40 @@ const string = "Hello";
 // }
 // console.log(reversedString)
 
+// function reversed(string) {
+//     let reversedstring = '';
+//     for (let i = string.length - 1; i >= 0; i--){
+//     reversedstring += string[i].toLowerCase();
 
-function reversed(string) {
-    let reversedstring = '';
-    for (let i = string.length - 1; i >= 0; i--){
-    reversedstring += string[i].toLowerCase();
+//     }
+//     return reversedstring;
 
-    }
-    return reversedstring;
+// }
 
+// console.log(reversed(string))
+
+//Напишіть цикл, який пропонує ввести
+//число більше 100 через prompt.
+//Якщо користувач ввів інше число - попросити
+//ввести ще раз и так далі.
+//Цикл повинен питати число, доки користувач не
+//введе число більше 100, чи не натисне кнопку
+//Cancel в prompt
+let inputValue = prompt("введіть число більше 100");
+while (inputValue <= 100) {
+  inputValue = prompt("введіть число більше 100");
+  if (inputValue === null) {
+    break;
+  }
 }
+console.log(inputValue);
 
-console.log(reversed(string))
+//При завантаженні сторінки користувачу пропонується
+//в prompt ввести число. Ввод додається к значенню
+//змінної total.
+//Операція вводу числа продовжується до тих пір,
+//доки користувач не натисне кнопку Cancel в prompt.
+//Після того як користувач закінчив ввод натиснувши на
+//кнопку Cancel, показати alert з рядком "Загальна сумма введенних чисел дорівнює [число]."
+//Робити перевірку,що користувач ввів саме число,
+//а не довільний набір символів, не потрібно.
