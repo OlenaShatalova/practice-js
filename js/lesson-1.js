@@ -177,3 +177,24 @@
 // }
 
 // console.log(quarterValue());
+
+//Напиши функцію:
+// Якщо число ділитися на 3 повертати fizz
+// якщо ділитися на 5 повертати buzz
+//Якщо ділитися на 3 і на 5 повернути fizzbuzz
+
+function checkNumber(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "fizzbuz";
+  }
+  if (number % 3 === 0) {
+    return "fizz";
+  }
+  if (number % 5 === 0) {
+    return "buzz";
+  }
+
+  return "error";
+}
+
+console.log(checkNumber(15));
