@@ -97,14 +97,99 @@
 //   arr.reduce((acc, num) => acc + num / arr.length, 0);
 // console.log(averageValue(arr));
 
-const users = [
-  { name: "Mango", age: 27 },
-  { name: "Jane", age: 31 },
-  { name: "Bob", age: 17 },
-];
+// const users = [
+//   { name: "Mango", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 17 },
+// ];
 
-const res = users
-  .filter((user) => user.age > 20)
-  .toSorted((a, b) => a.name.localeCompare(b.name))
-  .map((el) => el.name);
-console.log(res);
+// const res = users
+//   .filter((user) => user.age > 20)
+//   .toSorted((a, b) => a.name.localeCompare(b.name))
+//   .map((el) => el.name);
+// console.log(res);
+
+
+
+
+/**
+ * Напиши клас Client який створює об'єкт з ​​властивостями login email.
+ *
+ * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
+ */
+
+// class Client {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+//     get login () {
+//         return this.#login;
+//     }
+//     set login (newLogin) { 
+//         this.#login = newLogin;
+//     }
+//      get email () {
+//         return this.#email;
+//     }
+//     set email (newEmail) { 
+//         this.#email = newEmail;
+//     }
+// }
+
+// const client = new Client("mango", "mango@gmail.com");
+// console.log(client);
+// console.log(Client.prototype);
+// client.login = "Kiwi";
+// client.email = "kiwi@gmail.com";
+// console.log(client);
+// console.log(client.email);
+// const client1 = new Client("Orange", "orange@gmail.com");
+// console.log(client1);
+
+
+
+/**
+ * Створи клас для калькулятора, який має такі методи:
+ * - метод number, який набуває початкового значення для наступних операцій
+ * - метод getResult, який повертає фінальний результат усіх операцій, проведених із числом
+ * - методи add, substruct, divide, multiply
+ * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+ */
+
+// class Calculator {
+//     constructor() {
+//         this.result = 0;
+//     }
+//     number(num) {
+//         this.result = num;
+//         return this;
+//     }
+//     getResult() {
+//         return this.result;
+//     }
+//     add(num) {
+//         this.result += num;
+//         return this;
+//     }
+//     substract(num) {
+//         this.result -= num;
+//         return this;
+//     }
+//     divide(num) {
+//         this.result /= num;
+//         return this;
+//     }
+//     multiply(num) {
+//         this.result *= num;
+//         return this;
+//     }
+// }
+// const calculator = new Calculator();
+// const res1 = calculator.number(10).substract(5).multiply(2).divide(5).getResult();
+// console.log(res1);
+// const calculator1 = new Calculator();
+// const res2 = calculator1.number(20).substract(5).multiply(2).add(3).getResult();
+// console.log(res2);
