@@ -97,14 +97,14 @@
 //   arr.reduce((acc, num) => acc + num / arr.length, 0);
 // console.log(averageValue(arr));
 
-// const users = [
-//   { name: "Mango", age: 27 },
-//   { name: "Jane", age: 31 },
-//   { name: "Bob", age: 17 },
-// ];
+const users = [
+  { name: "Mango", age: 27 },
+  { name: "Jane", age: 31 },
+  { name: "Bob", age: 17 },
+];
 
-// const res = users
-//   .filter((user) => user.age > 20)
-//   .toSorted((a, b) => a.name.localeCompare(b.name))
-//   .map((el) => el.name);
-// console.log(res);
+const res = users
+  .filter((user) => user.age > 20)
+  .toSorted((a, b) => a.name.localeCompare(b.name))
+  .map((el) => el.name);
+console.log(res);
