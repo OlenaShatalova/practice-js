@@ -228,14 +228,14 @@
 //Цикл повинен питати число, доки користувач не
 //введе число більше 100, чи не натисне кнопку
 //Cancel в prompt
-let inputValue = prompt("введіть число більше 100");
-while (inputValue <= 100) {
-  inputValue = prompt("введіть число більше 100");
-  if (inputValue === null) {
-    break;
-  }
-}
-console.log(inputValue);
+// let inputValue = prompt("введіть число більше 100");
+// while (inputValue <= 100) {
+//   inputValue = prompt("введіть число більше 100");
+//     if (inputValue === null) {
+//       break;
+//     }
+// }
+// console.log(inputValue);
 
 //При завантаженні сторінки користувачу пропонується
 //в prompt ввести число. Ввод додається к значенню
@@ -246,3 +246,14 @@ console.log(inputValue);
 //кнопку Cancel, показати alert з рядком "Загальна сумма введенних чисел дорівнює [число]."
 //Робити перевірку,що користувач ввів саме число,
 //а не довільний набір символів, не потрібно.
+let numberValue = prompt("ВВедіть число або натисніть кнопку Cancel");
+let total = 0;
+while (true) {
+  total += Number(numberValue);
+  numberValue = prompt("ВВедіть число або натисніть кнопку Cancel");
+  if (numberValue === null) {
+    break;
+  }
+}
+alert(`Загальна сумма введенних чисел дорівнює ${total}`);
+console.log(total);

@@ -53,12 +53,58 @@
 // const findFirstOddNumber = (array) =>array.find(number => number % 2 !== 0);
 // console.log(findFirstOddNumber(numbers));
 
-
-
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-const numbers = [4, 2, 5, 1, 3];
-const sortedArrey = (array) => array.toSorted((a, b) => b - a);
-console.log(sortedArrey(numbers));
-console.log(numbers);
+// const numbers = [4, 2, 5, 1, 3];
+// const sortedArrey = (array) => array.toSorted((a, b) => b - a);
+// console.log(sortedArrey(numbers));
+// console.log(numbers);
+
+//TODO:===============task-07===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+// const stringArray = ["banana", "orange", "apple", "pear"];
+
+// const sortedArray = (array) => array.toSorted((a, b) => b.localeCompare(a));
+// console.log(sortedArray(stringArray));
+
+//TODO:=========task-8=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+// const users = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+
+// const filteredAge = (users) => users.filter((user) => user.age > 20);
+// console.log(filteredAge(users));
+
+//TODO:=========task-09=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const totalSum = (numbers) => numbers.reduce((acc, num) => acc + num, 0);
+// console.log(totalSum(numbers));
+
+//TODO:=========task-10=================
+// У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const averageValue = (arr) =>
+//   arr.reduce((acc, num) => acc + num / arr.length, 0);
+// console.log(averageValue(arr));
+
+// const users = [
+//   { name: "Mango", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 17 },
+// ];
+
+// const res = users
+//   .filter((user) => user.age > 20)
+//   .toSorted((a, b) => a.name.localeCompare(b.name))
+//   .map((el) => el.name);
+// console.log(res);
