@@ -44,3 +44,21 @@
 // const checkEvenArray = (array) => array.every((el) => el % 2 === 0);
 // const res = checkEvenArray(numbers);
 // console.log(res);
+
+//TODO:=========task-05=================
+// Знайдіть перше непарне число
+
+// const numbers = [2, 7, 6, 8, 9, 10, 12];
+
+// const findFirstOddNumber = (array) =>array.find(number => number % 2 !== 0);
+// console.log(findFirstOddNumber(numbers));
+
+
+
+//TODO:=========task-06=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+const numbers = [4, 2, 5, 1, 3];
+const sortedArrey = (array) => array.toSorted((a, b) => b - a);
+console.log(sortedArrey(numbers));
+console.log(numbers);
