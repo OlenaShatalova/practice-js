@@ -18,3 +18,9 @@
 .odd {
   background-color: #ffeb3d;
 }
+.film-list{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
