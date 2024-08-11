@@ -1,0 +1,253 @@
+:root {
+  --primary: #d81e5b;
+  --secondary: #8a4fff;
+  --grey: #aaa;
+  --light: #eee;
+  --dark: #131a26;
+  --toggle-light: hsl(230, 22%, 74%);
+  --toggle-dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+}
+
+/* common */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* components */
+
+.task-title {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+
+.module-title {
+  text-align: center;
+}
+
+/* accordion */
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+.accordion-list-item {
+  position: relative;
+  transition: all 500ms linear;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+.panel {
+  background-color: white;
+  display: none;
+  padding: 20px;
+  overflow: hidden;
+}
+.panel.active {
+  display: block;
+}
+
+/* switch */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default html checkbox */
+.switch input {
+  opacity: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-light);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 32px;
+  bottom: 5px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(90grad, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider:before {
+  transform: translateX(-24px);
+}
+.slider,
+.round {
+  border-radius: 34px;
+}
+
+.round::before {
+  border-radius: 50%;
+}
+
+input:checked + .round::before {
+  background-color: hsl(230, 17%, 14%);
+}
+/* /THEME/ */
+.dark {
+  --main-background: hsl(230, 17%, 14%);
+  --main-font: white;
+}
+
+.light {
+  --main-background: white;
+  --main-font: hsl(230, 17%, 14%);
+}
+
+.toggle-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-switch p {
+  padding: 1em;
+}
+body.dark h2 {
+  color: #f2f2f2;
+}
+
+form {
+  display: flex;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 18px;
+}
+
+button[type='submit'] {
+  padding: 10px 20px;
+  margin-left: 5px;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button[type='submit']:hover {
+  background-color: #006d9e;
+}
+
+ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+li {
+  padding: 10px;
+  background-color: #f2f2f2;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+li div {
+  display: flex;
+  gap: 8px;
+}
+li input {
+  width: 70%;
+  border: none;
+  background-color: #f2f2f2;
+}
+li input.active {
+  width: 70%;
+  background-color: #ffffff;
+}
+li button[data-action='edit'] {
+  background-color: #355075;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+li button[data-action='edit'].active {
+  background-color: #2f7600;
+  color: #fff;
+}
+
+li button[data-action='delete'] {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+li button:hover {
+  opacity: 0.8;
+}
