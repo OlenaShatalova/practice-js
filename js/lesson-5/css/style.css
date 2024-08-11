@@ -6,6 +6,8 @@
   --dark: #131a26;
   --toggle-light: hsl(230, 22%, 74%);
   --toggle-dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --main-background: hsl(230, 17%, 14%);
+  --main-font: white;
 }
 
 /* common */
@@ -151,8 +153,8 @@ input:checked + .round::before {
 }
 /* /THEME/ */
 .dark {
-  --main-background: hsl(230, 17%, 14%);
-  --main-font: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .light {
