@@ -74,3 +74,77 @@ ageBtnEl.addEventListener("click", () => {
 function getAge(ms) {
   return Math.floor(ms / (1000 * 60 * 60 * 24 * 365.25));
 }
+
+// ========================= Task - 5 ========================
+
+// console.log(1);
+// setTimeout(() => {
+//   console.log(2);
+// }, 5000);
+// console.log(3);
+// setTimeout(() => {
+//   console.log(4);
+// }, 2000);
+
+//TODO:====================01==========================
+/**
+ * Перероби функцію на проміс таким чином, щоб проміс повертав значення
+ * через 2 секунди після виклику функції
+ */
+
+// function greet() {
+//   return  'hello world';
+// }
+
+// function greet() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("hello world");
+//     });
+//   }, 2000);
+// }
+
+// greet()
+//   .then((response) => console.log(response))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("finally"));
+
+//TODO:====================02==========================
+/**
+ * - Використовуй prompt і повертай значення звідти.
+ * - Створи функцію, всередині якої буде проміс.
+ * Якщо значення не є числом, відхиляй проміс і логіруй "error".
+ * Якщо значення парне, вирішуй проміс і повертай "even" через 1 секунду.
+ * Якщо значення не парне, вирішуй проміс і повертай "odd" через 2 секунди.
+ */
+
+const value = prompt("past value");
+
+function checkValue(value) {
+  return new Promise((resolve, reject) => {
+    if (isNaN(value)) {
+      reject("error");
+    }
+    if (value % 2 === 0) {
+      setTimeout(() => {
+        resolve("even");
+      }, 1000);
+    }
+    if (value % 2 !== 0) {
+      setTimeout(() => {
+        resolve("odd");
+      }, 2000);
+    }
+  });
+}
+
+// checkValue(value).then(console.log).catch(console.log);
+// checkValue(value)
+//   .then((res) => {
+//     console.log(res);
+//     console.log("then");
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//     console.log("catch");
+//   });
